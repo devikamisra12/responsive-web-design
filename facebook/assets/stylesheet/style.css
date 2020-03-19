@@ -1,0 +1,268 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* general */
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.shadow:hover{
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    50% { box-shadow: 5px 10px 30px gray;}
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+.head {
+    background-color: #3B5998 ;
+    padding: 13px 0 0 0;
+    
+}
+.head-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.head-form {
+    display: flex;
+    padding-bottom: 20px;
+}
+.head-label {
+    color: #FFFFF9;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    /* margin-bottom: 1px; */
+    /* display: block; */
+
+}
+.head-input {
+    margin-left: 5px;
+}
+h1 {
+    color: #FFFFF9;
+    font-size: 35px;
+    font-family: inherit;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+.head-log {
+    background-color: rgb(77, 100, 151);
+    border: 1px solid rgb(24, 46, 94);
+    border-radius: 5%;
+    color: #FFFFF9;
+    font-weight: 500;
+    padding: 2px 5px ;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.head-log a:hover {
+    background-color: rgb(22, 42, 85);
+}
+
+/* main */
+.background {
+    background-image: linear-gradient(#FDFEFE 20%,#E0E3EF 70%,#E4E7F1 10%);
+}
+/* left */
+.heading {
+    color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 40px;
+    width: 450px;
+    /* word-spacing: -1px; */
+}
+.left {
+    width: 45%;
+}
+/* hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+/* right */
+.title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #333333;
+}
+.right {
+    width: 40%;
+}
+h4 {
+    color: #333333;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* form  */
+.name , .surname {
+    padding: 8px 10px;
+    border: 1px solid #b3b6b9;
+    border-radius: 5%;
+    margin-top: 15px;
+    background: transparent;
+    width: 194px;
+    height: 39px;
+}
+.number , .password {
+    border: 1px solid #b3b6b9;
+    border-radius: 5%;
+    background: transparent;
+    width: 399px;
+    height: 39px;
+    margin-top: 15px;
+    /* margin-bottom: 0; */
+}
+.text {
+    color: #90949c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:-5px;
+    /* padding: 10px; */
+}
+.gender {
+    margin: 10px;
+}
+.bir {
+    margin-bottom: 10px;
+}
+.padding {
+    padding: 5px;
+}
+
+/* button */
+.btn {
+    margin-top: 50px;
+}
+.button {
+    background-color: #5F9A4C;
+    color: #F3FFFF;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 7px 25px;
+    border-radius: 5%;
+    box-shadow: inset 0 1px 1px #a4e388;
+}
+
+/* responsive */
+
+@media all and (max-width: 768px) {
+    .left {
+        display: none;
+    }
+    .right {
+        text-align: center;
+        
+    }
+    .head-class , .head-form {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .number , .password,.surname,.name {
+        width: 100%;
+    }
+    /* .cent {
+        width: 100%;
+    } */
+    .form-gender {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* display: block; */
+    }
+   .hero {
+       text-align: center;
+       margin-left: 20%;
+       width: 100%;
+   }
+   /* * {
+       padding: none;
+       margin: none;
+       /* display: flex;
+       justify-content: center; */
+       /* text-align: center;
+   } */ 
+   .title {
+       font-size: 30px;
+       
+   }
+   h4 {
+       font-size: 20px;
+   }
+   .button {
+       padding: 7px 15px;
+       font-size: 15px;
+       font-weight: 400;
+   }
+   /* .padding {
+       padding: none;
+       display: flex;
+       flex-direction: row;
+
+   } */
+    .head-class{
+       /* display: flex;
+       justify-content: center;
+       align-items: center; */
+       text-align: center;
+   }
+    
+}
